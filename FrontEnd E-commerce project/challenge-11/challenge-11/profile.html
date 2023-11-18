@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+  
+</head>
+<body>
+  <div class="sticky-frame">
+    <iframe src="header.html"id="headerFrame" frameborder="0"  width="100%" height="225px"></iframe>
+    <script>
+        // Update cart and wishlist count inside the header iframe
+        function updateCartCountInIframe() {
+          const headerFrame = document.getElementById('headerFrame');
+          if (headerFrame && headerFrame.contentWindow) {
+            headerFrame.contentWindow.updateCartCount();
+            headerFrame.contentWindow.updateWishlistCount();
+          }
+        }
+
+        // Update cart and wishlist count every 0.5 seconds
+        setInterval(updateCartCountInIframe, 500);
+
+      </script>
+</div>
+    <div class="sidenav">
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+      </div>
+    <!-- Header content -->
+  </header>
+  <main>
+    <div class="profile">
+        <div>
+            <table>
+                <tr>
+                  <td ><div class="card">
+                    <img src="img.jpg" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <p><button>Contact</button></p>
+                  </div>
+
+                </td>
+                  <td style="text-align: center;vertical-align: middle;">
+                    <div class="main-section">
+                        <h1>User Profile</h1>
+                        <h2>User Information</h2>
+                        <p>Name: John Doe</p>
+                        <p>Email: skilllync@gmail.com</p>
+                        <p>Location: New York</p>
+                        <button class="edit-button">Edit</button>
+                      </div>
+                  </td>
+                </tr>
+              </table>
+                            
+        </div>
+    </div>   
+    
+      
+  </main>
+  <footer id="main-footer">
+    <iframe src="footer.html" frameborder="0" width="100%" height="500"></iframe>
+        <div><a id="scrollUp">
+            <i class="fa fa-arrow-up" style="font-size: 40px;position: fixed; right: 20px; bottom: 20px;"></i>
+          </a> 
+          <script src="js/index.js"></script>
+        </div>
+  </footer>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./js/header-footer.js"></script>
+</body>
+</html>

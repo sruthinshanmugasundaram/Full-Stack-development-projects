@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>product list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="sticky-frame">
+            <iframe src="header.html"id="headerFrame" frameborder="0"  width="100%" height="225px"></iframe>
+            <script>
+                // Update cart and wishlist count inside the header iframe
+                function updateCartCountInIframe() {
+                const headerFrame = document.getElementById('headerFrame');
+                if (headerFrame && headerFrame.contentWindow) {
+                    headerFrame.contentWindow.updateCartCount();
+                    headerFrame.contentWindow.updateWishlistCount();
+                }
+                }
+
+                // Update cart and wishlist count every 0.5 seconds
+                setInterval(updateCartCountInIframe, 500);
+
+              </script>
+        </div>
+    </header>
+  <main>
+    <div id="main">
+        <section class="product-list"></section>
+            <table>
+                <tr>
+                    <td style="width: 20%; background-color: rgb(240, 238, 238) ;">
+                        <aside class="left-main-container">
+                            <h1 >Features</h1>
+                            <h3 >Mens</h3>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Cotton
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                Hoodie
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Shirts
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                Pants
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Inners
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                Casuals
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Formals
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                Trousers
+                                </label>
+                            </div>
+                            <h3 >Women</h3>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Party wears 
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                Sarees
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Shirts
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    skirt
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Silk items
+                                </label>
+                            </div>
+                            <h3 >colors</h3>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <span class="square" style="background-color: brown;width: 20px;height: 20px;border: 1px solid #555459;border-radius: 2px;display: inline-block;"></span>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Brown
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <span class="square" style="background-color: rgb(52, 42, 165);width: 20px;height: 20px;border: 1px solid #555459;border-radius: 2px;display: inline-block;"></span>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                Blue
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <span class="square" style="background-color: rgb(42, 165, 81);width: 20px;height: 20px;border: 1px solid #555459;border-radius: 2px;display: inline-block;"></span>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Green
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <span class="square" style="background-color: rgb(219, 206, 23);width: 20px;height: 20px;border: 1px solid #555459;border-radius: 2px;display: inline-block;"></span>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Yellow
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <span class="square" style="background-color: rgb(250, 245, 245);width: 20px;height: 20px;border: 1px solid #555459;border-radius: 2px;display: inline-block;"></span>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                White
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <span class="square" style="background-color: rgb(126, 9, 169);width: 20px;height: 20px;border: 1px solid #555459;border-radius: 2px;display: inline-block;"></span>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Violet
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <span class="square" style="background-color: rgb(232, 11, 19);width: 20px;height: 20px;border: 1px solid #555459;border-radius: 2px;display: inline-block;"></span>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Red
+                                </label>
+                            </div>
+                            <h3 >Kids</h3>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Party wears 
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                Sarees
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                Shirts
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    skirt
+                                </label>
+                            </div>
+                            
+                        </aside>  
+                    </td>
+                    <td style="width: 80%;">
+                        <aside class="right-main-container">
+                            <div class="latest-products">
+                                <h1 class="text-center" style="font-size: 50px;"><center>latest-products</center></h1>
+                                <nav>
+                                    <ul>
+                                        <li><a href="#nav-home"id="tab1" class='nav-link active' aria-controls="product list 1" aria-selected='true' role="tab" tabindex=1 data-toggle='tab'>All</a></li>
+                                        <li><a href="#nav-new" id="tab2" class='nav-link' aria-controls="create-account" aria-selected='false' role="tab" tabindex=0 data-toggle='tab'>new</a></li>
+                                        <li><a href="#nav-features"id="tab2" class='nav-link' aria-controls="create-account" aria-selected='false' role="tab" tabindex=0 data-toggle='tab'>Featured</a></li>
+                                        <li><a href="#nav-offers"id="tab2" class='nav-link' aria-controls="create-account" aria-selected='false' role="tab" tabindex=0 data-toggle='tab'>offers</a></li>
+                                        <ul style="float: right; color: blue;">
+                                            <li><h4>Available products :<span id="cardCount">0</span></h4></li>
+                                        </ul>                                      
+                                    </ul>                                                          
+                                </nav>
+                
+                                <div class="row mx-auto container-fluid"></div>
+                      
+                    
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product1.png" alt="">
+                            <div class="product-details">
+                                <h5 class="p-name">Awesome Product 1</h5>
+                                <h4 class="p-price">$28.4</h4>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product1.png',28.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product1.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product2.png" alt="">
+                            <div class="product-details">
+                                <h5 class="p-name">Cool Product 2</h5>
+                                <h4 class="p-price">$63.9</h4>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                    <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product2.png',63.9)">Add to Cart</button>
+                                    <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product2.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product3.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Amazing Product 3</h5>
+                            <h4 class="p-price">$26.4</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product3.png',28.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product3.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product4.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Huge Product 4</h5>
+                            <h4 class="p-price">$58.1</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product4.png',58.1)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product4.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product5.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Tiny Product 5</h5>
+                            <h4 class="p-price">$58.3</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product5.png',58.3)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product5.png')">Add to Wishlist</button>
+
+                        </div>
+                        <div class="left">
+                            <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                            <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                            <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                        </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product6.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Expensive Product 6</h5>
+                            <h4 class="p-price">$82.4</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product6.png',82.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product6.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="js/index.js"></script>
+                </section>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+                    <div class="tab-pane" id="nav-features" role="tabpanel" aria-labelledby="tab2" aria-hidden='false'>
+                        <div class="row mx-auto container-fluid"></div>
+                      
+                    
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product1.png" alt="">
+                            <div class="product-details">
+                                <h5 class="p-name">Awesome Product 1</h5>
+                                <h4 class="p-price">$28.4</h4>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product1.png',28.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product1.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product2.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Cool Product 2</h5>
+                            <h4 class="p-price">$63.9</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product2.png',63.9)">Add to Cart</button>
+                            <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product2.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product3.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Amazing Product 3</h5>
+                            <h4 class="p-price">$26.4</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product3.png',26.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product3.png')">Add to Wishlist</button>
+
+                        </div>
+                        <div class="left">
+                            <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                            <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                            <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                        </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product4.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Huge Product 4</h5>
+                            <h4 class="p-price">$58.1</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product4.png',58.1)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product4.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product5.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Tiny Product 5</h5>
+                            <h4 class="p-price">$58.3</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product5.png',58.3)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product5.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product6.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Expensive Product 6</h5>
+                            <h4 class="p-price">$82.4</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product6.png',82.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product6.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="js/index.js"></script>
+                </section>
+                    </div>  
+                    <div class="tab-pane" id="nav-new" role="tabpanel" aria-labelledby="tab3" aria-hidden='false'>
+                        <div class="row mx-auto container-fluid"></div>
+                      
+                    
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product1.png" alt="">
+                            <div class="product-details">
+                                <h5 class="p-name">Awesome Product 1</h5>
+                                <h4 class="p-price">$28.4</h4>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product1.png',28.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product1.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product2.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Cool Product 2</h5>
+                            <h4 class="p-price">$63.9</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product2.png',63.9)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product2.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product3.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Amazing Product 3</h5>
+                            <h4 class="p-price">$26.4</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product3.png',26.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product3.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product4.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Huge Product 4</h5>
+                            <h4 class="p-price">$58.1</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product4.png',58.1)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product4.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product5.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Tiny Product 5</h5>
+                            <h4 class="p-price">$58.3</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product5.png',58.3)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product5.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product6.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Expensive Product 6</h5>
+                            <h4 class="p-price">$82.4</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product6.png',82.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product6.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="js/index.js"></script>
+                </section> 
+                    </div>
+                    <div class="tab-pane" id="nav-offers" role="tabpanel" aria-labelledby="tab3" aria-hidden='false'>
+                        <div class="row mx-auto container-fluid"></div>
+                      
+                    
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product1.png" alt="">
+                            <div class="product-details">
+                                <h5 class="p-name">Awesome Product 1</h5>
+                                <h4 class="p-price">$28.4</h4>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product1.png',28.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product1.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product2.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Cool Product 2</h5>
+                            <h4 class="p-price">$63.9</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product2.png',63.9)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product2.png')">Add to Wishlist</button>
+
+                        </div>
+                        <div class="left">
+                            <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                            <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                            <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                        </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product3.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Amazing Product 3</h5>
+                            <h4 class="p-price">$26.4</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product3.png',26.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product3.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product4.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Huge Product 4</h5>
+                            <h4 class="p-price">$58.1</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product4.png',58.1)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product4.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product5.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Tiny Product 5</h5>
+                            <h4 class="p-price">$58.3</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product5.png',58.3)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product5.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                        <div class="product text-center col-lg-4 col-md-6 col-sm-12">
+                            <img class="img-fluid mb-3" src="image/product6.png" alt="">
+                            <div class="product-details">
+                            <h5 class="p-name">Expensive Product 6</h5>
+                            <h4 class="p-price">$82.4</h4>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" onclick="addToCart('image/product6.png',82.4)">Add to Cart</button>
+                                <button class="btn btn-outline-warning w-100" onclick="addToWishlist('image/product6.png')">Add to Wishlist</button>
+
+                            </div>
+                            <div class="left">
+                                <button class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></button>
+                                <button class="view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                <button class="wish"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="js/index.js"></script>
+                   
+                            </div>
+                        </aside>
+                    </td>
+                </tr>
+            </table>
+    </div>
+    <section class="filter-options">
+        <!-- Filter options go here -->
+    </section>
+    <script src="js/index.js"></script>
+</main>
+
+
+
+  <footer>
+   
+    
+       <iframe src="footer.html" frameborder="0" width="100%" height="365px"></iframe>
+      
+    </div> 
+        <div><a id="scrollUp">
+            <i class="fa fa-arrow-up" style="font-size: 40px;position: fixed; right: 20px; bottom: 20px;"></i>
+          </a> 
+          <script src="js/index.js"></script>
+        </div>
+       
+  </footer>

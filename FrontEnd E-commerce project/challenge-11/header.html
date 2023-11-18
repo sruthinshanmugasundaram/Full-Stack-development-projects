@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swag of India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="top-navigation  clearfix" >
+            <div class="container-fluid" >
+                <div class="row d-flex justify-content-between align-items-center" >
+                    <div class="col col-lg-1 col-md-2 col-sm-3">
+                        
+                            <div class="social-media-icons">
+                                <div class="col col-lg-1 col-md-3 col-sm-3" ><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="col col-lg-1 col-md-3 col-sm-3" ><i class="fa fa-youtube" aria-hidden="true"></i></div>
+                                <div class="col col-lg-1 col-md-3 col-sm-3"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                            </div>
+                        
+                    </div>        
+                    <div class="col-lg-3 col-md-6 col-sm-9">
+                        <div class="search-wrapper">
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-10">
+                            <div style="width: 100%;">
+                                <input type="text" id="search" placeholder="Search Products & Brands" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col col-lg-1 col-md-2 col-sm-3">
+                        
+                            <div >
+                                <a href="">Sell On Company</a>
+                            </div>
+                        
+                    </div>
+                    <div class="col col-lg-1 col-md-2 col-sm-3">
+                                
+                            <div >
+                                <a href="">Download App</a>
+                            </div>
+                        
+                    </div>
+                                    
+                    
+                    <div class="col col-lg-1 col-md-2 col-sm-3">
+                        <div class="col col-lg-1 col-md-2 col-sm-3"></div>
+                            <select id="logoSelector" onchange="changeLogo()">
+                                <option value="logo1">India</option>
+                                <option value="logo2">French</option>
+                                <option value="logo3">England</option>
+                            </select>
+                        </div>
+                        <div class="col col-lg-1 col-md-2 col-sm-3">  
+                        <img id="logo" class="logo" src="image/india.png" alt="Logo 1">
+                        <p id="contact"><i class="fa fa-phone" aria-hidden="true"></i>+91 9008008085</p>
+                        
+                    </div>
+        
+                            
+                </div>      
+            </div>"   
+        </nav>
+        
+            
+        <nav class="main-navigation clearfix" id="header-sticky" style="width: 100%; background-color: lightgray;padding: 10px; transform: scale(1); transform-origin: 0 0;">
+    
+        
+            <div class="container-fluid" >
+                <div class="row d-flex justify-content-between align-items-center" >
+                    <div>
+                       
+                        <nav>
+                            <ul class="horizontal-menu">
+                               
+                            <li><a href="index.html"><img src="image/logo.png" alt="companylogo" style="max-width: 100%; height: auto;"></a>
+                            </li>
+                                    
+                                        <li ><div class="dropdown">
+                                            <div class="dropbtn"><a href="index.html">Home</a>
+                                            <ul class="dropdown-content">
+                                                    <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+            
+                                                    <div id="id01" class="modal">
+                                                    
+                                                    <form class="modal-content animate" action="/action_page.php" method="post">
+                                                        <div class="imgcontainer">
+                                                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                                                        </div>
+            
+                                                        <div class="container">
+                                                        <label for="uname"><b>Username</b></label>
+                                                        <input type="text" placeholder="Enter Username" name="uname" required>
+            
+                                                        <label for="psw"><b>Password</b></label>
+                                                        <input type="password" placeholder="Enter Password" name="psw" required>
+                                                            
+                                                        <button type="submit">Login</button>
+                                                        <label>
+                                                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                                                        </label>
+                                                        </div>
+            
+                                                        <div class="container" style="background-color:#f1f1f1">
+                                                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                                        <span class="psw">Forgot <a href="#">password?</a></span>
+                                                        </div>
+                                                    </form>
+                                                    </div>
+            
+                                                    <script>
+                                                
+                                                    var modal = document.getElementById('id01');
+            
+                                                    
+                                                    window.onclick = function(event) {
+                                                        if (event.target == modal) {
+                                                            modal.style.display = "none";
+                                                        }
+                                                    }
+                                                    </script></li>
+            
+                                                    <li><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">registration</button>
+                                                    <div id="id02" class="modal">
+                                                    <form class="modal-content animate" action="/action_page.php" method="post">
+                                                            <div class="imgcontainer">
+                                                            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                                                            </div>
+            
+                                                            <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputEmail4">Email</label>
+                                                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputPassword4">Password</label>
+                                                                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                                            </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                            <label for="inputAddress">Address</label>
+                                                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                                            </div>
+                                                            <div class="form-group">
+                                                            <label for="inputAddress2">Address 2</label>
+                                                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                                            </div>
+                                                            <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="inputCity">City</label>
+                                                                <input type="text" class="form-control" id="inputCity">
+                                                            </div>
+                                                            <div class="form-group col-md-4">
+                                                                <label for="inputState">State</label>
+                                                                <select id="inputState" class="form-control">
+                                                                <option selected>Choose...</option>
+                                                                <option>...</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group col-md-2">
+                                                                <label for="inputZip">Zip</label>
+                                                                <input type="text" class="form-control" id="inputZip">
+                                                            </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                                <label class="form-check-label" for="gridCheck">
+                                                                Check me out
+                                                                </label>
+                                                            </div>
+                                                            </div>
+                                                            <button type="submit" class="btn btn-primary">Sign in</button>
+                                                    </form>
+                                                </div>
+                                                <script>
+                                                    
+                                                    var modal = document.getElementById('id01');
+            
+                                                
+                                                    window.onclick = function(event) {
+                                                        if (event.target == modal) {
+                                                            modal.style.display = "none";
+                                                        }
+                                                    }
+                                                    </script></li>
+                                            </ul>        
+                                        </div> </li>
+                                       
+                                
+                               
+                                    <li class="dropdown">
+                                        <a class="dropbtn" href="" style="font-size: x-large;">Categories</a>
+                                                <ul class="dropdown-content">
+                                                    <li><a href="">Men</a></li>
+                                                    <li><a href="">Women</a></li>
+                                                    <li><a href="">Children</a></li>
+                                                    <li><a href="">Ethnic</a></li>
+                                                    <li><a href="">Winter</a></li>
+                                                </ul>
+                                    </li>
+                                   
+                              
+                                
+                                    <li class="dropdown">
+                                         <a class="dropbtn" href="" style="font-size: x-large;">Latest</a>
+                                            <ul class="dropdown-content">
+                                                <li><a href="products-list.html">Product List</a></li>
+                                                <li><a href="product-view.html">Product Details</a></li>
+                                            </ul>
+                                    </li> 
+                                       
+                                
+                                
+                                    <li class="dropbtn"><a href="">Blog</a></li>
+                               
+                                
+                                    <li class="dropbtn"><a href="seller.html">sellers</a></li>
+                               
+                               
+                                    <li class="dropbtn"><a href="">Contact</a></li>
+                                
+                                
+                                
+                                  <li class="wishlistnav">
+                                    <a href="wishlist.html">
+                                      wishlist <i class="fa fa-heart-o"></i><span id="wishlistCount">0</span>
+                                    </a>
+                                  </li>
+                                  
+                              
+                                <li class="cartnav">
+                                    <a href="cart.html">
+                                      <i class="fa fa-shopping-cart"></i> Cart <span id="cartCount">0</span>
+                                    </a>
+                                  </li>
+                                  
+                                
+                                    <li class="dropbtn" style="float: right;">
+                                        <button class="button">Sign In</button>
+                                    </li>
+                                
+                            </ul>
+                        </nav>
+                    </div>           
+                </div>
+            </div>
+        </nav>
+       <script src="js/index.js"></script>
+       <script>
+        // Update cart count on header.html page
+function updateCartCount() {
+  const cartCountElement = document.getElementById('cartCount');
+  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  const totalCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  cartCountElement.textContent = totalCount;
+}
+
+// Update cart count every 0.5 seconds
+setInterval(updateCartCount, 500);
+
+// Update wishlist count
+function updateWishlistCount() {
+  const wishlistCountElement = document.getElementById('wishlistCount');
+  const wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+  wishlistCountElement.textContent = wishlistItems.length;
+}
+
+       </script>
+</div>
+  </header>
+</body>
