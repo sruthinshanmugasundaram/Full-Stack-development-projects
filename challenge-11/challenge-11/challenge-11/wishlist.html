@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Include necessary CSS and JavaScript files -->
+    <style>
+      .sticky-frame {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          z-index: 999;
+          background-color: #f1f1f1;
+      }
+      .table{
+        margin-top: 225px;
+      }
+    </style>
+</head>
+<body>
+    <body>    
+        <header >
+          <div class="sticky-frame">
+            <iframe src="header.html"id="headerFrame" frameborder="0"  width="100%" height="225px"></iframe>
+            <script>
+                // Update cart and wishlist count inside the header iframe
+                function updateCartCountInIframe() {
+                  const headerFrame = document.getElementById('headerFrame');
+                  if (headerFrame && headerFrame.contentWindow) {
+                    headerFrame.contentWindow.updateCartCount();
+                    headerFrame.contentWindow.updateWishlistCount();
+                  }
+                }
+
+                // Update cart and wishlist count every 0.5 seconds
+                setInterval(updateCartCountInIframe, 500);
+
+              </script>
+        </div>
+      </header>
+    <main>
+      <table class="table">
+        <tr>
+          <td style="width: 30%;">
+            <div class="card mb-4">
+              <div class="card-body text-left">
+                <h4><strong>MY ACCOUNT</strong></h4>
+                <img src="image/Image 161.png" alt="avatar"
+                  class="rounded-circle img-fluid" style="width: 150px;">
+                <h5 class="my-3">ManiKandan</h5>
+                <p class="text-muted mb-1">mani2005.16@gmail.com</p>
+                <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                <div class=" mb-2 pb-3">
+                  <h4><strong>ORDER</strong></h4>
+                  <p>My Order</p>
+                  <p>Track Order</p>
+                  <p>Returns Order</p>
+                  <p>Cancelled Order</p>
+                </div>
+                <div class="mb-2 pb-3">
+                  <h4><strong>ACCOUNT</strong></h4>
+                  <p>Profile</p>
+                  <p>Saved Addresses</p>
+                  <p>Saved Cards</p>
+                  <p>Change Password</p>
+                  <button type="button" class="btn btn-warning">Wishlist</button>
+                </div>
+                <div class="mb-2 pb-3">
+                  <h4><strong>PAYMENT</strong></h4>
+                  <p>Phonepe</p>
+                  <p>Gift Card</p>
+                  <p>Debit Card</p>
+                  <p>Credit Card</p>
+                </div>
+                <div>
+
+                </div>
+              </div>
+            </div>
+          </td>
+          <td style="width: 70%;">
+            <div style="display: flex; align-items: center;">
+              <h4 style="color: orange; margin-right: 10px;"><strong>My Wishlist (2 Items)</strong></h4>
+              <i class="fa fa-heart" style="color: rgb(48, 46, 46);margin-left: 10px;"> Recently Added</i>
+                            
+            </div>
+            <div style="display: flex;float: right; ">
+              <h4 style="color: rgb(97, 97, 96); margin-right: 10px;"><strong>SORT</strong></h4>
+              <select >
+                    <option value="logo1">Price(Low to High)</option>
+                    <option value="logo2">Price(High to Low)</option>           
+              </select>              
+            </div>
+            
+            
+            <div id="wishlistItems" class="w-100"></div>
+          </td>
+        </tr>
+      </table>
+      
+
+      <script src="./js/index.js"></script>
+
+
+
+
+        
+    </main>
+    
+    <footer>
+        <iframe src="footer.html" frameborder="0" width="100%" height="365px"></iframe>
+   </footer>
+    
+    <!-- Include necessary JavaScript files -->
+    <script src="./js/index.js"></script>
+</body>
+</html>

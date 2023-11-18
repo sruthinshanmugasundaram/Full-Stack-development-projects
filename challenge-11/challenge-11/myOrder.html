@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My orders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Include necessary CSS and JavaScript files -->
+    <style>
+      .sticky-frame {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          z-index: 999;
+          background-color: #f1f1f1;
+      }
+      .table{
+        margin-top: 225px;
+      }
+      .order-container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #fff;
+    }
+    .card {
+  flex-direction: row;
+}
+.card img {
+  width: 30%;
+}
+    </style>
+</head>
+<body>
+    <body>    
+        <header >
+          <div class="sticky-frame">
+            <iframe src="header.html"id="headerFrame" frameborder="0"  width="100%" height="225px"></iframe>
+            <script>
+                // Update cart and wishlist count inside the header iframe
+                function updateCartCountInIframe() {
+                  const headerFrame = document.getElementById('headerFrame');
+                  if (headerFrame && headerFrame.contentWindow) {
+                    headerFrame.contentWindow.updateCartCount();
+                    headerFrame.contentWindow.updateWishlistCount();
+                  }
+                }
+
+                // Update cart and wishlist count every 0.5 seconds
+                setInterval(updateCartCountInIframe, 500);
+
+              </script>
+        </div>
+      </header>
+    <main>
+      <table class="table">
+        <tr>
+          <td style="width: 30%;">
+            <div class="card mb-4">
+              <div class="card-body text-left">
+                <h4><strong>MY ACCOUNT</strong></h4>
+                <img src="image/Image 161.png" alt="avatar"
+                  class="rounded-circle img-fluid" style="width: 150px;">
+                <h5 class="my-3">ManiKandan</h5>
+                <p class="text-muted mb-1">mani2005.16@gmail.com</p>
+                <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                <div class=" mb-2 pb-3">
+                  <h4><strong>ORDER</strong></h4>
+                  <p>My Order</p>
+                  <p>Track Order</p>
+                  <p>Returns Order</p>
+                  <p>Cancelled Order</p>
+                </div>
+                <div class="mb-2 pb-3">
+                  <h4><strong>ACCOUNT</strong></h4>
+                  <p>Profile</p>
+                  <p>Saved Addresses</p>
+                  <p>Saved Cards</p>
+                  <p>Change Password</p>
+                  <button type="button" class="btn btn-warning">Wishlist</button>
+                </div>
+                <div class="mb-2 pb-3">
+                  <h4><strong>PAYMENT</strong></h4>
+                  <p>Phonepe</p>
+                  <p>Gift Card</p>
+                  <p>Debit Card</p>
+                  <p>Credit Card</p>
+                </div>
+                <div>
+
+                </div>
+              </div>
+            </div>
+          </td>
+          <td style="width: 70%;">
+            <div class="order-container">
+                <h1 style="color: orange; ">My Orders</h1>
+                <div id="imageContainer"></div>
+
+    <script>
+        // Function to decode the image URLs from the URL parameters
+        function decodeImageUrls() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const encodedUrls = urlParams.get('images');
+            return JSON.parse(decodeURIComponent(encodedUrls));
+        }
+
+        // Function to generate HTML for each image
+        function generateImageHtml(imageUrl) {
+            return `
+                <div class="card" style="width: 100%;">
+                    <img src="${imageUrl}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <div class="card-body">
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <h5 class="card-title">Yours Favourite Premium Quality Naturals...</h5>
+                                    <p style="color:dimgrey;">color : Multicolor</p>
+                                    <p style="color:dimgrey;">Seller : Krishnapoojabhandar</p>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-7">
+                                    <h5>Rs 1000</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-7 col-sm-12">
+                                    <div class="form-check">
+                                        <span class="circle-indicator" style="background-color: rgb(9, 169, 12); width: 15px; height: 15px; border: 1px solid #555459; border-radius: 50%; display: inline-block;"></span>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Delivery expected by Jul 28
+                                        </label>
+                                        <p style="color:dimgrey;">Your Order has been placed</p>
+                                        <button class="remove-button" onclick="removeImage(this)">Remove</button>
+                                        </div>
+                                    
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to display images in the myOrder page
+        function displayImages() {
+            const imageContainer = document.getElementById('imageContainer');
+            const imageUrls = decodeImageUrls();
+
+            if (imageUrls && imageUrls.length > 0) {
+                imageUrls.forEach(imageUrl => {
+                    const imageHtml = generateImageHtml(imageUrl);
+                    imageContainer.innerHTML += imageHtml;
+                });
+            } else {
+                // Handle the case when there are no images to display
+                imageContainer.innerHTML = '<p>No images to display.</p>';
+            }
+        }
+
+        // Function to remove a specific card
+        function removeImage(button) {
+            const card = button.closest('.card');
+            card.remove();
+        }
+
+        // Call the displayImages function to show the images
+        displayImages();
+    </script>
+                    
+                  <div class="card" style="width: 100%;">
+                    <img src="image/product3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <h5 class="card-title">Yours Favourite Premium Quality Naturals...</h5>
+                                    <p style="color:dimgrey;">color : Multicolor</p>
+                                    <p style="color:dimgrey;">Seller : Krishnapoojabhandar</p>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-7">
+                                    <h5>Rs 1000</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-7 col-sm-12">
+                                    <div class="form-check">
+                                        <span class="circle-indicator" style="background-color: rgb(9, 169, 12); width: 15px; height: 15px; border: 1px solid #555459; border-radius: 50%; display: inline-block;"></span>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Delivery expected by Jul 28
+                                        </label>
+                                        <p style="color:dimgrey;">Your Order has been placed</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 100%;">
+                    <img src="image/product3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <h5 class="card-title">Yours Favourite Premium Quality Naturals...</h5>
+                                    <p style="color:dimgrey;">color : Multicolor</p>
+                                    <p style="color:dimgrey;">Seller : Krishnapoojabhandar</p>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-7">
+                                    <h5>Rs 1000</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-7 col-sm-12">
+                                    <div class="form-check">
+                                        <span class="circle-indicator" style="background-color: rgb(9, 169, 12); width: 15px; height: 15px; border: 1px solid #555459; border-radius: 50%; display: inline-block;"></span>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Delivery expected by Jul 28
+                                        </label>
+                                        <p style="color:dimgrey;">Your Order has been placed</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 100%;">
+                    <img src="image/product3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <h5 class="card-title">Yours Favourite Premium Quality Naturals...</h5>
+                                    <p style="color:dimgrey;">color : Multicolor</p>
+                                    <p style="color:dimgrey;">Seller : Krishnapoojabhandar</p>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-7">
+                                    <h5>Rs 1000</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-7 col-sm-12">
+                                    <div class="form-check">
+                                        <span class="circle-indicator" style="background-color: rgb(9, 169, 12); width: 15px; height: 15px; border: 1px solid #555459; border-radius: 50%; display: inline-block;"></span>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Delivered on Jul 28
+                                        </label>
+                                        <p style="color:dimgrey;">Your Order has been placed</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 100%;">
+                    <img src="image/product3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <h5 class="card-title">Yours Favourite Premium Quality Naturals...</h5>
+                                    <p style="color:dimgrey;">color : Multicolor</p>
+                                    <p style="color:dimgrey;">Seller : Krishnapoojabhandar</p>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-7">
+                                    <h5>Rs 1000</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-7 col-sm-12">
+                                    <div class="form-check">
+                                        <span class="circle-indicator" style="background-color: rgb(246, 73, 50); width: 15px; height: 15px; border: 1px solid #555459; border-radius: 50%; display: inline-block;"></span>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Returned
+                                        </label>
+                                        <p style="color:dimgrey;">Your product is cancelled</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 100%;">
+                    <img src="image/product3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <h5 class="card-title">Yours Favourite Premium Quality Naturals...</h5>
+                                    <p style="color:dimgrey;">color : Multicolor</p>
+                                    <p style="color:dimgrey;">Seller : Krishnapoojabhandar</p>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-7">
+                                    <h5>Rs 1000</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-7 col-sm-12">
+                                    <div class="form-check">
+                                        <span class="circle-indicator" style="background-color: rgb(169, 28, 9); width: 15px; height: 15px; border: 1px solid #555459; border-radius: 50%; display: inline-block;"></span>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Cancelled
+                                        </label>
+                                        <p style="color:dimgrey;">As per your request, your item has been canceled</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                  </div>
+              
+            </div>
+            
+              <script>
+                // Retrieve previous orders from localStorage
+                var orders = JSON.parse(localStorage.getItem('orders')) || [];
+            
+                // Display the list of previous orders
+                var orderList = document.getElementById('order-list');
+            
+                if (orders.length === 0) {
+                  var noOrdersMessage = document.createElement('li');
+                  noOrdersMessage.textContent = 'No actice orders are found.';
+                  orderList.appendChild(noOrdersMessage);
+                } else {
+                  for (var i = 0; i < orders.length; i++) {
+                    var order = orders[i];
+                    var orderItem = document.createElement('li');
+                    orderItem.textContent = order;
+                    orderList.appendChild(orderItem);
+                  }
+                }
+              </script>
+            
+          </td>
+        </tr>
+      </table>
+      
+
+      <script src="./js/index.js"></script>
+
+
+
+
+        
+    </main>
+    
+    <footer>
+        <iframe src="footer.html" frameborder="0" width="100%" height="365px"></iframe>
+   </footer>
+    
+    <!-- Include necessary JavaScript files -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
